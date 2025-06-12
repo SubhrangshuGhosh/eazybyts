@@ -1,0 +1,47 @@
+/* Centered full-screen background */
+.guest-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+  background: #f0f2f5; /* Light neutral background */
+}
+
+/* Form container */
+.guest-box {
+  background: #fff;
+  padding: 2rem;
+  max-width: 360px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Inputs */
+.guest-box input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Login button */
+.login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #28a745; /* Green color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.login-btn:hover {
+  opacity: 0.9;
+}
