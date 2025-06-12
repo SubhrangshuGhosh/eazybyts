@@ -1,0 +1,527 @@
+/* Full-page animated gradient */
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ef4705, #6e04d7, #0ced2a, #cf18b7);
+  background-size: 800% 800%;
+  animation: gradientBG 20s ease infinite;
+  padding-top: 4rem; /* push content below navbar */
+  padding: 2rem;
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* Gradient keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header (name) styling */
+.home-page h1 {
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Content container for bio/projects/skills/blogs */
+.home-page .home-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.8);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* Optional: spacing between sections */
+.home-page .home-content > section {
+  margin-bottom: 2rem;
+}
+
+.home-page__name {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.home-page__section {
+  margin-bottom: 2rem;
+}
+
+.home-page__section h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  
+  padding-bottom: 0.3rem;
+}
+
+.home-page__projects,
+.home-page__skills,
+.home-page__blogs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.home-page__project,
+.home-page__blog {
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 calc(33% - 1rem);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.home-page__project img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.home-page__skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.home-page__skill-list li {
+  background: #f5f5f5;
+  margin-bottom: 0.3rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+  .home-page__projects, .home-page__blogs {
+    flex-direction: column;
+  }
+  .home-page__project,
+  .home-page__blog {
+    flex: 1 1 100%;
+  }
+}
+
+
+.home-page__header-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.home-page__name {
+  font-size: 2.5rem;
+}
+.home-page__bio-text {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  
+}
+
+
+/* Project section container */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Each individual project item */
+.project-item {
+  width: 180px;
+  text-align: center;
+}
+
+/* Project image */
+.project-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect (optional) */
+.project-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Project name link */
+.project-item a {
+  display: block;
+  margin-top: 0.5rem;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* On hover, still keep it black */
+.project-item a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+
+/* Container for the entire project section */
+.home-page__projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Each individual project card */
+.home-page__project-item {
+  width: 180px;
+  text-align: center;
+}
+
+/* Project image */
+.home-page__project-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on image */
+.home-page__project-image:hover {
+  transform: scale(1.05);
+}
+
+/* Project name link */
+.home-page__project-name {
+  display: block;
+  margin-top: 0.5rem;
+  color: rgb(25, 4, 4);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Optional hover style */
+.home-page__project-name:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+/* Skill list layout */
+.home-page__skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+/* Individual skill box */
+.home-page__skill-item {
+  position: relative;
+  width: 180px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(9, 6, 6);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  background: white;
+  overflow: hidden;
+}
+
+/* Apply gradient fill based on level */
+.home-page__skill-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, rgba(19, 45, 238, 0.719), transparent);
+  z-index: 0;
+  opacity: 0.8;
+  transition: width 0.4s ease;
+  pointer-events: none;
+}
+
+/* Content on top of gradient */
+.home-page__skill-item {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dynamic width for gradient based on level */
+.home-page__skill-item[data-skill-level="1"]::before  { width: 10%; }
+.home-page__skill-item[data-skill-level="2"]::before  { width: 20%; }
+.home-page__skill-item[data-skill-level="3"]::before  { width: 30%; }
+.home-page__skill-item[data-skill-level="4"]::before  { width: 40%; }
+.home-page__skill-item[data-skill-level="5"]::before  { width: 50%; }
+.home-page__skill-item[data-skill-level="6"]::before  { width: 60%; }
+.home-page__skill-item[data-skill-level="7"]::before  { width: 70%; }
+.home-page__skill-item[data-skill-level="8"]::before  { width: 80%; }
+.home-page__skill-item[data-skill-level="9"]::before  { width: 90%; }
+.home-page__skill-item[data-skill-level="10"]::before { width: 100%; }
+
+@media (max-width: 700px) {
+  .home-page__skill-item {
+    width: 100%;
+  }
+}
+
+
+/* Blogs container layout */
+.home-page__blogs-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Each blog card */
+.home-page__blog-item {
+  width: 280px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Blog title */
+.home-page__blog-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Blog description container (link wraps it) */
+.home-page__blog-title:hover {
+  transform: scale(1.05);
+}
+
+/* Blog content inside the rectangle */
+.home-page__blog-content {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-align: left;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* Make blog content clickable as a link */
+.home-page__blog-item a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* Hover effect */
+.home-page__blog-item a:hover .home-page__blog-content {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive for small screens */
+@media (max-width: 800px) {
+  .home-page__blog-item {
+    width: 100%;
+  }
+}
+
+
+
+/* Skill list container */
+.home-page__skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+/* Individual skill item styled like a box with gradient */
+.home-page__skill-item {
+  position: relative;
+  width: 180px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to right, red 0%, transparent 0%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: background-size 0.5s ease;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+}
+
+/* Dynamically apply gradient fill based on skill level (1–10) */
+.home-page__skill-item[data-skill-level="1"]  { background-size: 10% 100%; }
+.home-page__skill-item[data-skill-level="2"]  { background-size: 20% 100%; }
+.home-page__skill-item[data-skill-level="3"]  { background-size: 30% 100%; }
+.home-page__skill-item[data-skill-level="4"]  { background-size: 40% 100%; }
+.home-page__skill-item[data-skill-level="5"]  { background-size: 50% 100%; }
+.home-page__skill-item[data-skill-level="6"]  { background-size: 60% 100%; }
+.home-page__skill-item[data-skill-level="7"]  { background-size: 70% 100%; }
+.home-page__skill-item[data-skill-level="8"]  { background-size: 80% 100%; }
+.home-page__skill-item[data-skill-level="9"]  { background-size: 90% 100%; }
+.home-page__skill-item[data-skill-level="10"] { background-size: 100% 100%; }
+
+/* Smooth gradient edge fading */
+.home-page__skill-item::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(to left, rgba(223, 18, 18, 0.1), rgba(0,0,0,0));
+  pointer-events: none;
+}
+
+/* Responsive stack on smaller screens */
+@media (max-width: 700px) {
+  .home-page__skill-item {
+    width: 100%;
+  }
+}
+
+/* Blogs container layout */
+.home-page__blogs-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Each blog card */
+.home-page__blog-item {
+  width: 280px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Blog title */
+.home-page__blog-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Blog description container (link wraps it) */
+.home-page__blog-title:hover {
+  transform: scale(1.05);
+}
+
+/* Blog content inside the rectangle */
+.home-page__blog-content {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-align: left;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* Make blog content clickable as a link */
+.home-page__blog-item a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* Hover effect */
+.home-page__blog-item a:hover .home-page__blog-content {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive for small screens */
+@media (max-width: 800px) {
+  .home-page__blog-item {
+    width: 100%;
+  }
+}
+
+
+/* Contact section */
+.home-page__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form styling */
+.home-page__contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Input fields */
+.home-page__contact-input,
+.home-page__contact-textarea {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  resize: none;
+}
+
+/* Placeholder styling */
+.home-page__contact-input::placeholder,
+.home-page__contact-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Submit button */
+.home-page__contact-button {
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4c4c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover */
+.home-page__contact-button:hover {
+  background-color: #e03b3b;
+}
